@@ -121,11 +121,11 @@
 
 // isLandscape(6, 6);
 
-// function isLandscapeSolution(width, height) {
-//     return (width > height);
-// }
+function isLandscapeSolution(width, height) {
+  return (width > height);
+}
 
-// console.log(isLandscapeSolution(5, 6));
+console.log(isLandscapeSolution(5, 6));
 
 // Exercise - 3 FizzBuzz
 
