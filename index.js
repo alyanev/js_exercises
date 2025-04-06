@@ -178,32 +178,6 @@
 // showNumbers(10);
 
 
-// Exercise 15 - Count Truthy values of an array
-
-// function countTruthy(array) {
-
-//     let count = 0;
-
-// for (let i = 0; i < array.length; i++) {
-//     if (array[i]) {
-//         count++;
-//     }
-// }
-
-// for (let index in array) {
-//     if (index) {
-//         count++;
-//     }
-
-//     for (let index of array) {
-//         if (index) {
-//             count++;
-//         }
-//     }
-//     console.log(count);
-// }
-// countTruthy([1, 2, 3, undefined, 0, '', 'tr']);
-
 
 // Exercise 17 Sum of Multiples of 3 and 5
 
@@ -1547,18 +1521,18 @@
 
 // 2 reduce
 
-const people = [
-  { name: "Alice" },
-  { name: "Bob" },
-  { name: "Charlie" },
-  { name: "David" }
-];
+// const people = [
+//   { name: "Alice" },
+//   { name: "Bob" },
+//   { name: "Charlie" },
+//   { name: "David" }
+// ];
 
 
-const names = people.reduce((acc, person) => {
+// const names = people.reduce((acc, person) => {
 
-  acc.push(person.name);
-  return acc;
-}, []);
+//   acc.push(person.name);
+//   return acc;
+// }, []);
 
-console.log(names);
+// console.log(names);
