@@ -155,30 +155,6 @@
 // checkSpeed(74);
 
 
-// Exercise 14 - Even and Odd
-
-// function showNumbers(limit) {
-
-//     if (limit < 0) {
-//         return console.log('hi');
-//     }
-
-//     for (let i = 0; i <= limit; i++) {
-//         // if (i % 2 === 0) {
-//         //     console.log(i, 'EVEN');
-//         // } else {
-//         //     console.log(i, 'ODD');
-//         // }
-
-//         const message = (i % 2 === 0) ? 'EVEN' : 'ODD';
-//         console.log(i, message);
-//     }
-// }
-
-// showNumbers(10);
-
-
-
 // Exercise 17 Sum of Multiples of 3 and 5
 
 // function sum(limit) {
