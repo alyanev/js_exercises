@@ -109,24 +109,6 @@
 // maxOfTwoNumbers(12, 11);
 
 
-// 11 Exercise - 2 Landscape or Portrait
-
-// function isLandscape(width, height) {
-//     if (width > height) {
-//         console.log('Landscape');
-//     } else {
-//         console.log('Portrait');
-//     }
-// }
-
-// isLandscape(6, 6);
-
-function isLandscapeSolution(width, height) {
-  return (width > height);
-}
-
-console.log(isLandscapeSolution(5, 6));
-
 // Exercise - 3 FizzBuzz
 
 // function fizzBuzz(input) {
@@ -221,27 +203,6 @@ console.log(isLandscapeSolution(5, 6));
 //     console.log(count);
 // }
 // countTruthy([1, 2, 3, undefined, 0, '', 'tr']);
-
-
-// Exercise 16 - Print only String properties from an object
-
-// function showProperties(obj) {
-
-//     for (let key in obj) {
-//         if (typeof obj[key] === 'string') {
-//             console.log(key, obj[key])
-//         }
-//     }
-// }
-
-// const movie = {
-//     title: 'Interstellar',
-//     releaseYear: 2015,
-//     rating: 9.0,
-//     director: 'EdikoiSi'
-// };
-
-// showProperties(movie);
 
 
 // Exercise 17 Sum of Multiples of 3 and 5
