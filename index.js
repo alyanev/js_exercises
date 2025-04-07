@@ -153,6 +153,7 @@
 // sum(15);
 
 
+
 // Exercise 19 - Stars
 
 // function showStars(rows) {
@@ -212,13 +213,13 @@
 //       name: name,
 //       age: age,
 //       greet: function() {
-//         console.log(`Здравей, аз съм ${this.name} и съм на ${this.age} години.`);
+//         console.log(`Hello, I am ${this.name} and I am ${this.age} years old.`);
 //       }
 //     };
 //   }
 
-//   const person1 = createPerson("Иван", 30);
-//   const person2 = createPerson("Мария", 25);
+//   const person1 = createPerson("James", 30);
+//   const person2 = createPerson("Anna", 25);
 
 //   person1.greet();
 //   person2.greet();
@@ -272,15 +273,9 @@
 
 // Circle.call({}, 1);  === const another = new Circle(1);
 
-// Circle.apply({}, [1, 2, 3]); // Така можеш да подадем на съществуващия обект допълнителен аргумент, който е масив.
+// Circle.apply({}, [1, 2, 3]); 
 
 // Objects - 7 Value VS Reference Types
-
-// Обекти и масиви: Когато ги копираш, създаваш референция към оригиналния обект.
-// Промените в копието ще се отразят и на оригинала.
-
-// Примитивни стойности (Number, String, Boolean и др.): Когато ги копираш, създаваш истинско копие на стойността.
-// Промените в копието няма да се отразят на оригиналната стойност.
 
 
 // let x = 10;
@@ -340,7 +335,7 @@
 
 // Object - 9 Cloning an object
 
-// Shte iterirame wsichki property i methodi i shte to kopirame v noviqt object
+// Iterating all properties and methods and copy them to the new object.
 
 // const circle = {
 //     radius: 1,
@@ -355,7 +350,7 @@
 //     anotherCircleObject[key] = circle[key];
 // }
 
-// const another = Object.assign({}, circle); // клонира всички свойства и методи от circle object в новия обкет another.
+// const another = Object.assign({}, circle); // Cloning all properties and methods from circle obj to 'another' obj.
 
 // const anotherObject = { ...circle};
 // console.log(anotherObject);
@@ -422,26 +417,7 @@
 
 
 
-// Objects 15 - Exercise 1 Address Object
 
-// const address1 = {
-// street: 'Yavorov',
-// city: 'Veliko Tarnovo',
-// zipCode: '5000'
-// };
-
-// function showAddress(address1) {
-
-//     for (let key in address1) {
-//         console.log(`${key}: ${address1[key]}`);
-//     }
-// }
-// for (let key of Object.keys(address)) {
-//     console.log(`${key}: ${address[key]}`);
-// }
-// }
-
-// showAddress(address1);
 
 // Objects 16 - Exercise Factory and Constructor functions, create objects
 
@@ -566,7 +542,7 @@
 
 // 3 Finding Elements (Primitive Types)
 
-// Зависи дали запазване примитивни или референтни типове данни в масив
+// It depends on whether we are storing primitive and reference data types in an array.
 
 // Primitives
 
@@ -634,7 +610,7 @@
 // numbers = [];
 // console.log(another);
 
-// Solution 2                  // THe best solution
+// Solution 2                
 // numbers.length = 0;
 // console.log(numbers);
 // console.log(another);
@@ -931,9 +907,9 @@
 
 // 21 Exercise - Count Occurrences
 
+// first solution
 
 // function countOccurrences(array, searchElement) {
-// first solution
 
 // let counter = 0;
 
@@ -945,8 +921,10 @@
 
 // return counter;
 
-// sec solution
+// second solution
 
+
+// function countOccurrences(array, searchElement) {
 // const sum = array.reduce((accumulator, current) => {
 //     if (current === searchElement) {
 //         accumulator++;
@@ -956,8 +934,9 @@
 
 // return sum;
 
-// third solution най-доброто решение
+// third solution 
 
+// function countOccurrences(array, searchElement) {
 //     return array.reduce((accumulator, current) => {
 //         const occerrence = (current === searchElement) ? 1 : 0;
 //         return accumulator + occerrence;
@@ -987,445 +966,5 @@
 // console.log(sum);
 
 
-//              AI Exercises          //
 
 
-// function timesTo(array, time) {
-
-//     const times = array.map(item => item * time);
-//     return times;
-// }
-
-// const numbers = [1, 2, 3, 4, 5];
-
-// const mapped = timesTo([1, 2, 3], 5);
-
-
-// const reduced = mapped.reduce((acc, curr) => (curr + acc));
-
-// console.log(mapped);
-// console.log(reduced);
-// console.log(numbers.some(n => n >= 5));
-
-
-// const filtered = numbers.filter(n => n > 2);
-// const maped = filtered.map(n => n + 1);
-
-// console.log(maped);
-
-// const products = [
-//     { name: 'Apple', price: 50 },
-//     { name: 'Banana', price: 20 },
-//     { name: 'Laptop', price: 200 },
-// ];
-
-// const total = products.reduce((acc, product) => acc + product.price, 0)
-// console.log(total);
-
-// const hasPriceMoreThanHundred = products.some(product => product.price > 100);
-
-// console.log(hasPriceMoreThanHundred);
-
-// const productNames = products.reduce((acc, product) => {
-//     acc.push(product.name);
-//     return acc;
-//   }, []); // Начална стойност е празен масив
-
-//   console.log(productNames); // ['Apple', 'Banana', 'Laptop']
-
-
-///////////// L2
-
-// 1
-
-// const products = [
-//     { name: 'Apple', price: 2, quantity: 10 },
-//     { name: 'Banana', price: 1.5, quantity: 20 },
-//     { name: 'Orange', price: 3, quantity: 15 },
-// ];
-
-
-// const totalPrice = products.reduce((acc, product) => acc + product.price * product.quantity, 0);
-// const productPrices = products.map(product => product.price * product.quantity);
-
-// console.log(totalPrice);
-
-// 2
-
-// const products = [
-//   { name: 'Apple', price: 2, quantity: 10, category: 'fruit' },
-//   { name: 'Banana', price: 1.5, quantity: 20, category: 'fruit' },
-//   { name: 'Carrot', price: 1, quantity: 15, category: 'vegetable' },
-//   { name: 'Orange', price: 3, quantity: 15, category: 'fruit' },
-//   { name: 'Lettuce', price: 1.2, quantity: 10, category: 'vegetable' },
-// ];
-
-
-// const totalProductPrice = products
-//   .filter(product => product.category === 'fruit')
-//   .reduce((acc, product) => acc + product.price * product.quantity, 0);
-
-
-// const fruits = products.filter(product => product.category === 'fruit');
-// const fruitNames = fruits.map(fruit => fruit.name);
-// const totalPrice = fruits.reduce((acc, product) => acc + product.price * product.quantity, 0);
-
-// console.log(totalProductPrice);
-
-// 3
-
-// const products = [
-//   { name: 'Apple', price: 2, category: 'fruit' },
-//   { name: 'Banana', price: 1.5, category: 'fruit' },
-//   { name: 'Carrot', price: 1, category: 'vegetable' },
-//   { name: 'Broccoli', price: 3, category: 'vegetable' },
-//   { name: 'Orange', price: 3, category: 'fruit' },
-// ];
-
-// const vegetables = products.filter(product => product.category === 'vegetable');
-// const productAndPrice = vegetables.map(product => (product.name + '-' + product.price));
-// const priceBiggerThanTwo = vegetables.some(product => product.price > 2);
-
-// console.log(productAndPrice);
-
-
-// 4
-
-
-// const products = [
-//   { name: 'Apple', price: 2, quantity: 10, category: 'fruit' },
-//   { name: 'Banana', price: 1.5, quantity: 20, category: 'fruit' },
-//   { name: 'Carrot', price: 1, quantity: 5, category: 'vegetable' },
-//   { name: 'Broccoli', price: 3, quantity: 3, category: 'vegetable' },
-//   { name: 'Orange', price: 3, quantity: 15, category: 'fruit' },
-// ];
-
-// const lowPriced = products.filter(product => product.price <= 2)
-// const names = lowPriced.map(product => product.name);
-// const quantity = lowPriced.every(product => product.quantity > 5);
-
-// console.log(quantity);
-
-
-// 5
-
-// const products = [
-//   { name: 'Apple', price: 2, quantity: 10, category: 'fruit' },
-//   { name: 'Banana', price: 1.5, quantity: 20, category: 'fruit' },
-//   { name: 'Carrot', price: 1, quantity: 5, category: 'vegetable' },
-//   { name: 'Broccoli', price: 3, quantity: 3, category: 'vegetable' },
-//   { name: 'Orange', price: 3, quantity: 15, category: 'fruit' },
-// ];
-
-// const fruits = products.filter(product => product.category === 'fruit');
-// const fruitPrice = fruits.map(fruit => fruit.price * fruit.quantity);
-// const totalPrice = fruitPrice.reduce((acc, fruit) => acc + fruit, 0);
-
-// console.log(totalPrice);
-
-
-// 6
-
-// const products = [
-//   { name: 'Apple', price: 2, quantity: 10, category: 'fruit' },
-//   { name: 'Banana', price: 1.5, quantity: 20, category: 'fruit' },
-//   { name: 'Carrot', price: 3, quantity: 5, category: 'vegetable' },
-//   { name: 'Broccoli', price: 3, quantity: 3, category: 'vegetable' },
-//   { name: 'Orange', price: 3, quantity: 15, category: 'fruit' },
-// ];
-
-// const pricedAboveTwo = products.filter(product => product.price > 2);
-// const quantityLowThanFive = pricedAboveTwo.some(product => product.quantity < 5);
-// const everyIsFruit = pricedAboveTwo.every(product => product.category === 'fruit');
-
-
-// 7
-
-// const products = [
-//   { name: 'Apple', price: 2, quantity: 10, category: 'fruit' },
-//   { name: 'Banana', price: 1.5, quantity: 20, category: 'fruit' },
-//   { name: 'Carrot', price: 1, quantity: 5, category: 'vegetable' },
-//   { name: 'Broccoli', price: 3, quantity: 3, category: 'vegetable' },
-//   { name: 'Orange', price: 3, quantity: 15, category: 'fruit' },
-// ];
-
-// const quantity = products.filter(product => product.category === 'fruit' && product.quantity > 10);
-// const names = quantity.map(product => product.name);
-// const total = quantity.reduce((acc, product) => acc + product.price * product.quantity, 0);
-
-// console.log(total);
-
-// 1
-
-// Какво би се случило, ако трябва да групираш не по категория, а по цена или количество?
-
-// Можеш ли да добавиш и допълнителна логика, например, да филтрираш само продуктите с цена над определена стойност, преди да ги групираш?
-
-// const products = [
-//   { name: 'Apple', quantity: 2, quantity: 10, category: 'fruit' },
-//   { name: 'Banana', price: 1.5, quantity: 20, category: 'fruit' },
-//   { name: 'Carrot', price: 1, quantity: 5, category: 'vegetable' },
-//   { name: 'Broccoli', price: 3, quantity: 3, category: 'vegetable' },
-//   { name: 'Orange', price: 3, quantity: 15, category: 'fruit' },
-//   { name: 'Potato', price: 0.5, quantity: 25, category: 'vegetable' }
-// ];
-
-// const filteredProducts = products.filter(product => product.quantity > 5);
-
-// const productsByCategory = filteredProducts.reduce((acc, product) => {
-//   if (!acc[product.quantity]) {
-//     acc[product.quantity] = [];
-//   }
-//   acc[product.quantity].push(product);
-//   return acc;
-// }, {});
-
-// console.log(productsByCategory);
-
-// 2
-
-// const products = [
-//   { name: "apple", price: 3, category: "fruit", quantity: 10 },
-//   { name: "banana", price: 2, category: "fruit", quantity: 5 },
-//   { name: "carrot", price: 4, category: "vegetable", quantity: 12 },
-//   { name: "broccoli", price: 6, category: "vegetable", quantity: 7 },
-//   { name: "cherry", price: 8, category: "fruit", quantity: 3 }
-// ];
-
-
-// const priceAboveFive = products.filter(product => product.price > 5);
-// const productName = priceAboveFive.map(product => product.name);
-// const total = priceAboveFive.reduce((acc, product) => acc + product.price * product.quantity, 0);
-
-// 3
-
-// const products = [
-//   { name: "apple", price: 3, category: "fruit", quantity: 10 },
-//   { name: "banana", price: 2, category: "fruit", quantity: 5 },
-//   { name: "carrot", price: 4, category: "vegetable", quantity: 12 },
-//   { name: "broccoli", price: 6, category: "vegetable", quantity: 7 },
-//   { name: "cherry", price: 8, category: "fruit", quantity: 3 }
-// ];
-
-// const fruits = products.filter(product => product.category === 'fruit');
-
-// const productsByCategory = fruits.reduce((acc, product) => {
-//   const productWithTotal = {
-//     name: product.name,
-//     totalPrice: product.price * product.quantity
-//   };
-//   acc.push(productWithTotal);
-//   return acc;
-// }, []);
-
-// console.log(productsByCategory);
-
-// 1 Reduce
-
-// const products = [
-//   { name: "apple", price: 3, category: "fruit" },
-//   { name: "banana", price: 2, category: "fruit" },
-//   { name: "carrot", price: 4, category: "vegetable" },
-//   { name: "broccoli", price: 6, category: "vegetable" },
-//   { name: "cherry", price: 8, category: "fruit" }
-// ];
-
-// const avgPrice = products.reduce((acc, obj) => acc + obj.price, 0) / products.length;
-
-// console.log(avgPrice);
-
-// 2 Reduce
-
-// const products = [
-//   { name: "apple", price: 3 },
-//   { name: "banana", price: 2 },
-//   { name: "carrot", price: 4 },
-//   { name: "broccoli", price: 6 },
-//   { name: "cherry", price: 8 }
-// ];
-
-// const prices = products.reduce((acc, obj) => {
-//   acc.push(obj.price);
-//   return acc;
-// }, []);
-
-// const usingMap = products.map(object => object.price);
-
-// console.log(prices);
-// console.log(usingMap);
-
-// 3 redude
-
-// const products = [
-//   { name: "apple", category: "fruit", quantity: 10 },
-//   { name: "banana", category: "fruit", quantity: 5 },
-//   { name: "carrot", category: "vegetable", quantity: 12 },
-//   { name: "broccoli", category: "vegetable", quantity: 7 },
-//   { name: "cherry", category: "fruit", quantity: 3 }
-// ];
-
-// const fruits = products.filter(product => product.category === 'fruit');
-// const totalFruitQuantity = fruits.reduce((acc, obj) => acc + obj.quantity, 0);
-
-// const tFruitQuantity = products
-//   .filter(product => product.category === 'fruit')
-//   .reduce((acc, obj) => acc + obj.quantity, 0);
-
-// console.log(tFruitQuantity);
-
-// 4 reduce
-
-// const products = [
-//   { name: "apple", category: "fruit" },
-//   { name: "banana", category: "fruit" },
-//   { name: "carrot", category: "vegetable" },
-//   { name: "broccoli", category: "vegetable" },
-//   { name: "cherry", category: "fruit" }
-// ];
-
-// const productsByCategory = products.reduce((acc, obj) => {
-
-//   if (!acc[obj.category]) {
-//     acc[obj.category] = [];
-//   }
-//   acc[obj.category].push(obj);
-//   return acc;
-
-// }, {});
-
-// 5 reduce
-
-// const products = [
-//   { name: "apple", price: 3 },
-//   { name: "banana", price: 2 },
-//   { name: "carrot", price: 3 },
-//   { name: "broccoli", price: 4 },
-//   { name: "cherry", price: 2 },
-//   { name: "orange", price: 3 }
-// ];
-
-// const productsByPrice = products.reduce((acc, product) => {
-//   if (!acc[product.price]) {
-//     acc[product.price] = [];
-//   }
-//   acc[product.price].push(product);
-//   return acc;
-// }, {});
-
-// console.log(productsByPrice);
-
-// 6 reduce
-
-// const people = [
-//   { name: "Alice", age: 25 },
-//   { name: "Bob", age: 17 },
-//   { name: "Charlie", age: 34 },
-//   { name: "David", age: 42 },
-//   { name: "Eve", age: 60 },
-//   { name: "Frank", age: 29 },
-//   { name: "Grace", age: 15 }
-// ];
-
-// const peopleByAge = people.reduce((acc, person) => {
-//   let ageGroup;
-//   if (person.age > 0 && person.age <= 18) {
-//     ageGroup = '0-18';
-//   } else if (person.age >= 19 && person.age <= 30) {
-//     ageGroup = '19-30';
-//   } else if (person.age >= 31 && person.age <= 50) {
-//     ageGroup = '31-50';
-//   } else {
-//     ageGroup = '51+';
-//   }
-
-//   if (!acc[ageGroup]) {
-//     acc[ageGroup] = [];
-//   }
-
-//   acc[ageGroup].push(person);
-//   return acc;
-// }, {});
-
-// console.log(peopleByAge);
-
-
-// 7 reduce
-
-// const products = [
-//   { name: "apple", price: 5 },
-//   { name: "banana", price: 2 },
-//   { name: "carrot", price: 15 },
-//   { name: "broccoli", price: 8 },
-//   { name: "steak", price: 60 },
-//   { name: "orange", price: 12 }
-// ];
-
-// const productsByPriceGroup = products.reduce((acc, product) => {
-//   let priceGroup = '';
-//   if (product.price >= 0 && product.price <= 10) {
-//     priceGroup = '0-10';
-//   } else if (product.price >= 11 && product.price <= 20) {
-//     priceGroup = '11-20';
-//   } else if (product.price >= 21 && product.price <= 50) {
-//     priceGroup = '21-50';
-//   } else {
-//     priceGroup = '50+';
-//   }
-
-//   if (!acc[priceGroup]) {
-//     acc[priceGroup] = [];
-//   }
-
-//   acc[priceGroup].push(product);
-//   return acc;
-// }, {});
-
-// console.log(productsByPriceGroup);
-
-// 1 reduce
-
-//Задача 1: Групиране на хора по начална буква на името
-
-// Имаш масив от хора.
-//  Всеки човек има име и възраст.
-//  Използвай reduce, за да групираш хората по първата буква от тяхното име.
-//  Резултатът трябва да е обект, в който всяка ключова стойност е първата буква на името, а стойността е масив от хора, чиито имена започват с тази буква.
-
-// const people = [
-//   { name: "Alice", age: 25 },
-//   { name: "Bob", age: 30 },
-//   { name: "Anna", age: 22 },
-//   { name: "Charlie", age: 35 },
-//   { name: "David", age: 40 },
-//   { name: "Diana", age: 27 }
-// ];
-
-// const peopleAlphabetic = people.reduce((acc, person) => {
-//   if (!acc[person.name.charAt(0)]) {
-//     acc[person.name.charAt(0)] = [];
-//   }
-//   acc[person.name.charAt(0)].push(person);
-
-//   return acc;
-// }, {});
-
-// console.log(peopleAlphabetic);
-
-
-// 2 reduce
-
-// const people = [
-//   { name: "Alice" },
-//   { name: "Bob" },
-//   { name: "Charlie" },
-//   { name: "David" }
-// ];
-
-
-// const names = people.reduce((acc, person) => {
-
-//   acc.push(person.name);
-//   return acc;
-// }, []);
-
-// console.log(names);
