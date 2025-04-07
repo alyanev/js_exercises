@@ -419,29 +419,7 @@
 
 
 
-// Objects 16 - Exercise Factory and Constructor functions, create objects
 
-// function createAddress(street, city, zipCode) {
-//     return {
-//         street,
-//         city,
-//         zipCode
-//     };
-// }
-
-// function CreateAddressConstr(street, city, zipCode) {
-//     this.street = street;
-//     this.city = city;
-//     this.zipCode = zipCode;
-// }
-
-// let address = new CreateAddressConstr('Yavorov', 'Veliko Tarnovo', 5000);
-
-// console.log(address);
-
-// let factoryAddress = createAddress('Yavorov', 'Veliko Tarnovo', 5000);
-
-// console.log(factoryAddress);
 
 
 // Objects 17 - Exercise Object Equality
