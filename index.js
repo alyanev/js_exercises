@@ -356,8 +356,6 @@
 // console.log(anotherObject);
 
 
-// Objects - 11 Math
-
 // Object - 12 String
 
 // String primitive
@@ -414,12 +412,6 @@
 // now.setFullYear(1940);
 
 // console.log(now);
-
-
-
-
-
-
 
 
 // Objects 17 - Exercise Object Equality
@@ -774,31 +766,3 @@
 // });
 
 // console.log(sum);
-
-
-// 17 - Exercise 1 - Array from Range
-
-// const numbers = arrayFromRange(1, 5);
-
-// function arrayFromRange(min, max) {
-
-//     const output = [];
-//     for (let n = min; n <= max; n++) {
-//         output.push(n);
-//     }
-
-//     return output;
-// }
-
-// console.log(numbers);
-
-
-
-
-
-
-
-
-
-
-
