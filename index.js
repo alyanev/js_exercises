@@ -793,29 +793,6 @@
 // console.log(numbers);
 
 
-// 18 - Exercise - Includes
-
-// const numbers = [1, 2, 3, 4, 'w'];
-
-// function includes(array, searchElement) {
-
-//     // for (let i = 0; i < array.length; i++) {
-//     //     if (array[i] === searchElement) {
-//     //         return true;
-//     //     }
-//     // }
-//     // return false;
-
-//     for (let element of array) {
-//         if (element === searchElement) {
-//             return true;
-//         }
-//     }
-//     return false;
-
-// }
-
-// console.log(includes(numbers, 4));
 
 
 
